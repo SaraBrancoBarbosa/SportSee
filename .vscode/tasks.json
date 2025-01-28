@@ -1,0 +1,37 @@
+{
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "label": "Back",
+            "type": "shell",
+            "command": "cd Back-end;yarn dev",
+            "problemMatcher": [],
+            "presentation": {
+                "group": "SportSee"
+            },
+            "runOptions": {
+                "runOn": "folderOpen"
+            },
+            "icon": {
+                "id": "symbol-method",
+                "color": "terminal.ansiMagenta"
+            },
+        },
+        {
+            "label": "Front",
+            "type": "shell",
+            "command": "cd Front-end;npm run dev",
+            "problemMatcher": [],
+            "presentation": {
+                "group": "Billed"
+            },
+            "runOptions": {
+                "runOn": "folderOpen"
+            },
+            "icon": {
+                "id": "rocket",
+                "color": "terminal.ansiYellow"
+            },
+        }
+    ]
+}
