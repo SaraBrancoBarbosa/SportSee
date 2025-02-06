@@ -11,7 +11,6 @@ body {
   width: 100%;
   min-height: 100dvh;
   text-align: center;
-  width: 100%;
   margin: 0 auto;
 }
 
@@ -25,6 +24,54 @@ a:hover {
 }
 
 /***** Variables *****/
+/***** Loading animation *****/
+.loading {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  color: #FF0101;
+  font-size: 1.2rem;
+  font-weight: bold;
+  padding: 30px 0;
+}
+.loading .spinner {
+  width: 20px;
+  height: 20px;
+  border: 3px solid #E3E3E3;
+  border-top: 3px solid #FF0101;
+  border-radius: 50%;
+  -webkit-animation: spin 1s linear infinite;
+          animation: spin 1s linear infinite;
+  margin-left: 10px;
+}
+
+@-webkit-keyframes spin {
+  0% {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
+}
+
+@keyframes spin {
+  0% {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
+}
 .footer {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -44,7 +91,7 @@ a:hover {
   background-color: #020203;
   position: fixed;
   left: 0;
-  top: 91px;
+  top: 90px;
 }
 .footer .icons {
   display: -webkit-box;
