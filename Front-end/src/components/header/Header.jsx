@@ -14,7 +14,7 @@ function Header() {
             <nav className="nav-container">
                 <NavLink to="/" className="nav-content">Accueil</NavLink>
                 <NavLink to="/user/:id" className="nav-content">Profil</NavLink>
-                <NavLink to="/" className="nav-content">Réglage</NavLink>
+                <NavLink to="/settings" className="nav-content">Réglages</NavLink>
                 <NavLink to="/" className="nav-content">Communauté</NavLink>
             </nav>
         </header>

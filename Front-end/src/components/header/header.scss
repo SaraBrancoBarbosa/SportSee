@@ -4,15 +4,16 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
-    background-color: $secondary-color;
+    background-color: $bg-color;
     height: 91px;
     width: 100%;
     gap: 150px;
     padding: 0 90px 0 30px;
-    position: absolute;
+    position: fixed;
     top: 0;
     left: 0;
     filter: drop-shadow(0 4px 4px rgba(0, 0, 0, 0.25));
+    z-index: 2;
 
     .nav-container {
         display: flex;
