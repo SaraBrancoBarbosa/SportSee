@@ -3,6 +3,7 @@ import Layout from "./layouts/Layout"
 import Profile from "./pages/profile/Profile"
 import Error from "./pages/error/Error"
 import Homepage from "./pages/homepage/Homepage"
+import Settings from "./pages/settings/Settings"
 
 const AppRouter = () => {
     return (
@@ -11,6 +12,7 @@ const AppRouter = () => {
         <Route path="/" element={<Layout />}>
         <Route index element={<Homepage />} />
           <Route path="user/:id" element={<Profile />} />
+          <Route path="settings" element={<Settings />} />
           <Route path="error" element={<Error />} />
           <Route path="*" element={<Error />} />
         </Route>
