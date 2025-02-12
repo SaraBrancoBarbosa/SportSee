@@ -1,0 +1,104 @@
+@import "../../index";
+
+.bar-chart-container {
+    
+    .customTooltip {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background: $primary-color-darker;
+        color: white;
+        padding: 1px 7px;
+        height: 63px;
+      
+        .tooltipDetails {
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          gap: 15px;
+        }
+      
+        .label {
+          font-size: 0.438rem;
+          font-weight: medium;
+        }
+    }
+
+    .customLegend {
+        display: flex;
+        justify-content: end;
+        gap: 30px;
+        padding-bottom: 40px;
+
+        .icon-and-text {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+
+            .icon {
+                width: 8px;
+                height: 8px;
+                border-radius: 50px;
+            }
+
+            .text {
+                font-size: 0.875rem;
+                font-weight: medium;
+                color: $quaternary-color;
+            }
+        }
+    }
+
+    // The title on the left
+    .title-text {
+        font-size: 0.938rem;
+        font-weight: medium;
+        fill: #20253A;
+    }
+
+    // The yAxis CSS
+    .yAxis {
+        .recharts-cartesian-axis-line {
+            display: none;
+        }
+
+        .recharts-cartesian-axis-tick-line {
+            display: none;
+        }
+
+        .recharts-cartesian-axis-tick-value {
+            font-size: 0.875rem;
+            fill: #9B9EAC;
+        }
+    }
+
+    // The xAxis CSS
+    .xAxis {
+        .recharts-cartesian-axis-line {
+            stroke: #DEDEDE;
+        }
+        .recharts-cartesian-axis-tick-line {
+            display: none;
+        }
+        .recharts-cartesian-axis-tick-value {
+            font-size: 0.875rem;
+            fill: #9B9EAC;
+        }
+    }
+    
+    // The grey vertical dashed lines
+    .recharts-cartesian-grid-vertical {
+        display: none;
+    }
+
+    /*
+    // The couples of bars
+    .first-bar {
+        fill: #282D30;
+    }
+
+    .second-bar {
+        fill: $primary-color-darker;
+    }
+    */
+}

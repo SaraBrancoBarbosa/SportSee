@@ -1,0 +1,175 @@
+/**** Bases ****/
+* {
+  font-family: Roboto, "DM Sans", sans-serif;
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+body {
+  width: 100%;
+  min-height: 100dvh;
+  text-align: center;
+  margin: 0 auto;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+/***** Variables *****/
+/***** Loading animation *****/
+.loading {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  color: #FF0101;
+  font-size: 1.2rem;
+  font-weight: bold;
+  padding: 30px 0;
+}
+.loading .spinner {
+  width: 20px;
+  height: 20px;
+  border: 3px solid #E3E3E3;
+  border-top: 3px solid #FF0101;
+  border-radius: 50%;
+  -webkit-animation: spin 1s linear infinite;
+          animation: spin 1s linear infinite;
+  margin-left: 10px;
+}
+
+@-webkit-keyframes spin {
+  0% {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
+}
+
+@keyframes spin {
+  0% {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
+}
+.bar-chart-container {
+  /*
+  // The couples of bars
+  .first-bar {
+      fill: #282D30;
+  }
+
+  .second-bar {
+      fill: $primary-color-darker;
+  }
+  */
+}
+.bar-chart-container .customTooltip {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  background: #E60000;
+  color: white;
+  padding: 1px 7px;
+  height: 63px;
+}
+.bar-chart-container .customTooltip .tooltipDetails {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 15px;
+}
+.bar-chart-container .customTooltip .label {
+  font-size: 0.438rem;
+  font-weight: medium;
+}
+.bar-chart-container .customLegend {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: end;
+  gap: 30px;
+  padding-bottom: 40px;
+}
+.bar-chart-container .customLegend .icon-and-text {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 10px;
+}
+.bar-chart-container .customLegend .icon-and-text .icon {
+  width: 8px;
+  height: 8px;
+  border-radius: 50px;
+}
+.bar-chart-container .customLegend .icon-and-text .text {
+  font-size: 0.875rem;
+  font-weight: medium;
+  color: #74798C;
+}
+.bar-chart-container .title-text {
+  font-size: 0.938rem;
+  font-weight: medium;
+  fill: #20253A;
+}
+.bar-chart-container .yAxis .recharts-cartesian-axis-line {
+  display: none;
+}
+.bar-chart-container .yAxis .recharts-cartesian-axis-tick-line {
+  display: none;
+}
+.bar-chart-container .yAxis .recharts-cartesian-axis-tick-value {
+  font-size: 0.875rem;
+  fill: #9B9EAC;
+}
+.bar-chart-container .xAxis .recharts-cartesian-axis-line {
+  stroke: #DEDEDE;
+}
+.bar-chart-container .xAxis .recharts-cartesian-axis-tick-line {
+  display: none;
+}
+.bar-chart-container .xAxis .recharts-cartesian-axis-tick-value {
+  font-size: 0.875rem;
+  fill: #9B9EAC;
+}
+.bar-chart-container .recharts-cartesian-grid-vertical {
+  display: none;
+}/*# sourceMappingURL=barChart.css.map */
