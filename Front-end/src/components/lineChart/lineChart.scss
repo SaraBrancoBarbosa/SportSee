@@ -1,0 +1,53 @@
+@import "../../index";
+
+.line-chart-container {
+    background-color: $primary-color;
+    
+    .customTooltip {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background: white;
+        color: #000000;
+        padding: 1px 7px;
+        height: 25px;
+      
+        .tooltipDetails {
+          display: flex;
+        }
+      
+        .label {
+          font-size: 0.5rem;
+          font-weight: medium;
+        }
+    }
+    
+    // Chart x and y lines CSS
+    .recharts-cartesian-axis-tick-value {
+        fill: rgba(255,255,255,0.5);
+    }
+
+    .recharts-cartesian-axis-line {
+        display: none;
+        
+    }
+    
+    .recharts-cartesian-axis-tick-line {
+        display: none;
+    }
+    
+    .recharts-yAxis {
+        .recharts-cartesian-axis-tick-value {
+            display: none;
+        }
+    }
+    
+    // Dots
+    .recharts-line-dot {
+        display: none;
+    
+        &:hover, &:active {
+            display: block;
+        }
+    }
+}
