@@ -115,6 +115,7 @@ function BarChartDailyActivity({ userActivity }) {
 }
 
 BarChartDailyActivity.propTypes = {
+    // J'aimerais faire en sorte de supprimer userActivity pour ne garder que day, kg et calories
     userActivity: PropTypes.shape({
         sessions: PropTypes.arrayOf(
             PropTypes.shape({
