@@ -10,10 +10,9 @@ import {
 } from "recharts"
 import PropTypes from "prop-types"
 import "./barChart.css"
-import { useEffect, useState } from "react"
 
-function getDailyActivityData(userActivity) {
-    return userActivity.sessions.map((session, index) => ({
+function getActivitiesData(sessions) {
+    return sessions.map((session, index) => ({
         // Au lieu d'afficher les dates, on affiche des chiffres à partir de 1
         day: index + 1,
         kilogram: session.kilogram,
@@ -21,18 +20,8 @@ function getDailyActivityData(userActivity) {
     }))
 }
 
-function BarChartDailyActivity({ userActivity }) {
+function BarChartActivities({ sessions }) {
   
-    const [barChartData, setBarChartData] = useState([])
-
-    // Hook pour gérer les données quand userActivity change
-    useEffect(() => {
-        if (userActivity && userActivity.sessions) {
-        const data = getDailyActivityData(userActivity)
-        setBarChartData(data)
-        }
-    }, [userActivity])
-
     // Customisation du tooltip
     const CustomTooltip = ({ active, payload }) => {
         if (active && payload && payload.length) {
@@ -65,14 +54,14 @@ function BarChartDailyActivity({ userActivity }) {
     }
 
     // On affiche le graphique uniquement si barChartData est disponible
-    if (!barChartData.length) {
-        return null
+    if (!sessions.length) {
+        return <></>
     }
 
     return (
     <ResponsiveContainer className="bar-chart-container">
-        <BarChart data={barChartData} barCategoryGap={54}>
-            <CartesianGrid strokeDasharray="3 3" stroke="#DEDEDE" />
+        <BarChart data={getActivitiesData(sessions)} barCategoryGap={54}>
+            <CartesianGrid strokeDasharray="2 2" stroke="#DEDEDE" />
             <XAxis dataKey="day" />
             <YAxis orientation="right" />
             <Tooltip
@@ -114,20 +103,17 @@ function BarChartDailyActivity({ userActivity }) {
     )
 }
 
-BarChartDailyActivity.propTypes = {
-    // J'aimerais faire en sorte de supprimer userActivity pour ne garder que day, kg et calories
-    userActivity: PropTypes.shape({
-        sessions: PropTypes.arrayOf(
-            PropTypes.shape({
+BarChartActivities.propTypes = {
+    sessions: PropTypes.arrayOf(
+        PropTypes.shape({
             day: PropTypes.node.isRequired,
             kilogram: PropTypes.number.isRequired,
             calories: PropTypes.number.isRequired,
-            })
-        ).isRequired,
-    }).isRequired,
-  
-    active: PropTypes.node,
+        })
+    ).isRequired,
+
     payload: PropTypes.node,
+    active: PropTypes.node,
 }
 
-export default BarChartDailyActivity
+export default BarChartActivities
