@@ -1,26 +1,5 @@
 @import "../../index";
 
-.main-container {
-    display: flex;
-    flex-direction: column;
-    text-align: start;
-    gap: 30px;
-    padding: 68px 90px 86px 100px;
-    width: 100%;
-    height: 100%;
-
-    h1 {
-        font-size: 3rem;
-        font-weight: normal;
-    }
-
-    .id-link {
-        font-size: 1.125rem;
-        font-weight: normal;
-        text-decoration: underline;
-
-        &:hover {
-            color: #FF0101;
-        }
-    }
+.span {
+    color: $primary-color;
 }
