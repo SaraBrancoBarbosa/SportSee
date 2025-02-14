@@ -2,7 +2,6 @@ import PropTypes from "prop-types"
 import CardKeyData from '../card/Card'
 
 const KeyData = ({keyData}) => {
-  console.log(keyData, keyData.lipidCount)
 
   return (
     <div className="key-data">

@@ -13,7 +13,6 @@ function PageKeyData( ) {
 
   // On utilise l'API mocked ou back
   const { data:keyData, loading, loaded, error } = api.useGetKeyData(userId)
-  console.log("keyData reçu dans PageKeyData :", keyData)
 
   // Error 500 management
   if (error) {
@@ -36,7 +35,7 @@ function PageKeyData( ) {
     </div>
     )
   }
-  console.log(keyData)
+
   return (
       <KeyData keyData={keyData} />
   )
