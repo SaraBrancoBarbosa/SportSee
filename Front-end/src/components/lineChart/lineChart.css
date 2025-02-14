@@ -74,6 +74,7 @@ a:hover {
 }
 .line-chart-container {
   background-color: #FF0101;
+  padding: 0 15px;
 }
 .line-chart-container .customTooltip {
   display: -webkit-box;

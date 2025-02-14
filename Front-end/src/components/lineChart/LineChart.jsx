@@ -1,4 +1,3 @@
-import { useEffect, useState } from "react"
 import PropTypes from "prop-types"
 import {
   LineChart,
@@ -10,28 +9,18 @@ import {
 import "./lineChart.css"
 
 // On nomme les jours à afficher sur le graphique
-function getSessionData(averageSessions) {
+function getAverageSessionsData(sessions) {
   const daysArray = ["L", "M", "M", "J", "V", "S", "D"]
 
   // On récupère les données de "day" et "sessionLength"
-  return averageSessions.sessions.map((session) => ({
+  return sessions.map((session) => ({
     day: daysArray[session.day - 1],
     sessionLength: session.sessionLength,
   }))
 }
 
-function LineChartTime({ averageSessions }) {
+function LineChartAverageSessions({ sessions }) {
   
-  const [lineChartData, setLineChartData] = useState([])
-
-  // Hook pour gérer les données quand averageSessions change
-  useEffect(() => {
-    if (averageSessions && averageSessions.sessions) {
-      const data = getSessionData(averageSessions)
-      setLineChartData(data)
-    }
-  }, [averageSessions])
-
   // Customisation du tooltip
   const CustomTooltip = ({ active, payload }) => {
     if (active && payload && payload.length) {
@@ -46,14 +35,26 @@ function LineChartTime({ averageSessions }) {
     return null
   }
 
+  /*
+  const [lineChartData, setLineChartData] = useState([])
+
+  // Hook pour gérer les données quand averageSessions change
+  useEffect(() => {
+    if (averageSessions && averageSessions.sessions) {
+      const data = getAverageSessionsData(averageSessions)
+      setLineChartData(data)
+    }
+  }, [averageSessions])
+*/
+
   // On affiche le graphique uniquement si lineChartData est disponible
-  if (!lineChartData.length) {
-    return null
+  if (!sessions.length) {
+    return <></>
   }
   
   return (
     <ResponsiveContainer className="line-chart-container">
-      <LineChart data={lineChartData} accessibilityLayer>
+      <LineChart data={getAverageSessionsData(sessions)} accessibilityLayer>
         <defs>
           <linearGradient id="opacityGradient">
             <stop offset="0%" stopColor="#FFFFFF" stopOpacity={0.5} />
@@ -87,19 +88,21 @@ function LineChartTime({ averageSessions }) {
         ></Line>
       </LineChart>
     </ResponsiveContainer>
-  );
+  )
 }
 
-LineChartTime.propTypes = {
-  averageSessions: PropTypes.shape({
-    sessions: PropTypes.arrayOf(PropTypes.shape({
-        day: PropTypes.number.isRequired,
-        sessionLength: PropTypes.number.isRequired,
-      })).isRequired,
-  }).isRequired,
+LineChartAverageSessions.propTypes = {
+  
+  sessions: PropTypes.arrayOf(
+    PropTypes.shape({
+      day: PropTypes.number.isRequired,
+      sessionLength: PropTypes.number.isRequired,
+    })
+  ).isRequired,
 
   active: PropTypes.node,
   payload: PropTypes.node,
+
 }
 
-export default LineChartTime
+export default LineChartAverageSessions
