@@ -10,7 +10,7 @@ const iconMap = {
     "Lipides": "/assets/icons/lipid.svg"
 }
 
-function Card({ backgroundColor, label, value }) {
+function CardKeyData({ backgroundColor, label, value }) {
 
     const icon = iconMap[label] || ""
 
@@ -30,11 +30,11 @@ function Card({ backgroundColor, label, value }) {
 	)
 }
 
-Card.propTypes = {
+CardKeyData.propTypes = {
 	icon: PropTypes.string,
 	backgroundColor: PropTypes.string,
 	label: PropTypes.string,
     value: PropTypes.string,
 }
 
-export default Card
+export default CardKeyData
