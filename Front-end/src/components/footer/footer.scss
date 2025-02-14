@@ -6,11 +6,8 @@
     align-items: center;
     justify-content: space-evenly;
     width: 117px;
-    min-height: calc(100dvh - 91px);
+    height: 100%;
     background-color: $bg-color;
-    position: fixed;
-    left: 0;
-    top: 90px;
 
     .icons {
         display: flex;

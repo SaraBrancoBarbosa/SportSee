@@ -87,11 +87,8 @@ a:hover {
       -ms-flex-pack: space-evenly;
           justify-content: space-evenly;
   width: 117px;
-  min-height: calc(100dvh - 91px);
+  height: 100%;
   background-color: #020203;
-  position: fixed;
-  left: 0;
-  top: 90px;
 }
 .footer .icons {
   display: -webkit-box;
