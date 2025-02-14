@@ -1,21 +1,23 @@
-import "./radialBarChart.css"
 import { 
-    RadialBarChart, 
-    RadialBar, 
-    Legend, 
-    ResponsiveContainer 
+  RadialBarChart, 
+  RadialBar, 
+  Legend, 
+  ResponsiveContainer 
 } from "recharts"
 import PropTypes from "prop-types"
+import "./radialBarChart.css"
 
-function RadialBarChartScore({ score }) {
-
-  const data = [
+function getScoreData(score) {
+  return [
     {
       name: "Score",
       // On multiplie la valeur par 100 (puisqu'on a du 0.% dans les data)
       value: score * 100,  
     }
   ]
+}
+
+function RadialBarChartScore({ score }) {
 
   const style = {
     top: 24,
@@ -32,7 +34,7 @@ function RadialBarChartScore({ score }) {
           innerRadius="80%" 
           outerRadius="70%" 
           barSize={10} 
-          data={data}
+          data={getScoreData(score)}
           // Point de départ de l'angle
           startAngle={90}
           // Puis calcul dynamique de l'angle de fin
