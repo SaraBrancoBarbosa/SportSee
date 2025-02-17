@@ -3,14 +3,15 @@ import PropTypes from "prop-types"
 
 const Score = ({score}) => {
   return (
-    <div className="daily">
-        <RadialBarChartScore score={score} />
+    <div className="chart">
+      <RadialBarChartScore score={score} />
     </div>
+    
   )
 }
 
 Score.propTypes = {
-  score: PropTypes.arrayOf(PropTypes.object)
+  score: PropTypes.number
 }
 
 export default Score
