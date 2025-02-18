@@ -72,18 +72,6 @@ a:hover {
             transform: rotate(360deg);
   }
 }
-.bar-chart-container {
-  /*
-  // The couples of bars
-  .first-bar {
-      fill: #282D30;
-  }
-
-  .second-bar {
-      fill: $primary-color-darker;
-  }
-  */
-}
 .bar-chart-container .customTooltip {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -114,7 +102,7 @@ a:hover {
 }
 .bar-chart-container .customTooltip .label {
   font-size: 0.438rem;
-  font-weight: medium;
+  font-weight: 500;
 }
 .bar-chart-container .customLegend {
   display: -webkit-box;
@@ -142,12 +130,12 @@ a:hover {
 }
 .bar-chart-container .customLegend .icon-and-text .text {
   font-size: 0.875rem;
-  font-weight: medium;
+  font-weight: 500;
   color: #74798C;
 }
 .bar-chart-container .title-text {
   font-size: 0.938rem;
-  font-weight: medium;
+  font-weight: 500;
   fill: #20253A;
 }
 .bar-chart-container .yAxis .recharts-cartesian-axis-line {

@@ -13,7 +13,7 @@ import "./barChart.css"
 
 function getActivitiesData(sessions) {
     return sessions.map((session, index) => ({
-        // Au lieu d'afficher les dates, on affiche des chiffres à partir de 1
+        // Instead of displaying the dates => numbers starting from 1
         day: index + 1,
         kilogram: session.kilogram,
         calories: session.calories
@@ -22,7 +22,7 @@ function getActivitiesData(sessions) {
 
 function BarChartActivities({ sessions }) {
   
-    // Customisation du tooltip
+    // Toopltip customisation
     const CustomTooltip = ({ active, payload }) => {
         if (active && payload && payload.length) {
             return (
@@ -37,7 +37,7 @@ function BarChartActivities({ sessions }) {
         return null
     }
 
-    // Customisation de la légende
+    // Legend customisation
     const CustomLegend = ({ payload }) => {
         return (
             <div className="customLegend">
@@ -53,19 +53,20 @@ function BarChartActivities({ sessions }) {
         )
     }
 
-    // On affiche le graphique uniquement si barChartData est disponible
+    // To display the chart only when the data exist
     if (!sessions.length) {
         return <></>
     }
 
     return (
     <ResponsiveContainer className="bar-chart-container">
-        <BarChart data={getActivitiesData(sessions)} barCategoryGap={54}>
+        <BarChart data={getActivitiesData(sessions)} barGap={8} >
             <CartesianGrid strokeDasharray="2 2" stroke="#DEDEDE" />
-            <XAxis dataKey="day" />
-            <YAxis orientation="right" />
+            <XAxis dataKey="day" tickMargin={15} />
+            <YAxis orientation="right" tickMargin={20} />
             <Tooltip
-                content={<CustomTooltip />}
+                content={<CustomTooltip />} 
+                cursor={{fill: "#DFDFDF"}}
             />
             <Legend
                 layout="horizontal"
@@ -75,20 +76,17 @@ function BarChartActivities({ sessions }) {
             <Bar 
                 className="first-bar"
                 dataKey="kilogram" 
-                barSize={7}
                 radius={[3, 3, 0, 0]}
-                barGap={8}
+                barSize={7}
                 fill="#282D30"
             />
             <Bar 
                 className="second-bar"
                 dataKey="calories" 
-                barSize={7}
                 radius={[3, 3, 0, 0]}
-                barGap={8}
+                barSize={7}
                 fill="#E60000"
             />
-
             <text
                 className="title-text"
                 x={0}
@@ -97,7 +95,6 @@ function BarChartActivities({ sessions }) {
             >
                 Activité quotidienne
             </text>
-
         </BarChart>
     </ResponsiveContainer>
     )

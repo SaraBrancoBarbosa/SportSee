@@ -20,7 +20,7 @@
       
         .label {
           font-size: 0.438rem;
-          font-weight: medium;
+          font-weight: 500;
         }
     }
 
@@ -43,7 +43,7 @@
 
             .text {
                 font-size: 0.875rem;
-                font-weight: medium;
+                font-weight: 500;
                 color: $quaternary-color;
             }
         }
@@ -52,7 +52,7 @@
     // The title on the left
     .title-text {
         font-size: 0.938rem;
-        font-weight: medium;
+        font-weight: 500;
         fill: #20253A;
     }
 
@@ -90,15 +90,4 @@
     .recharts-cartesian-grid-vertical {
         display: none;
     }
-
-    /*
-    // The couples of bars
-    .first-bar {
-        fill: #282D30;
-    }
-
-    .second-bar {
-        fill: $primary-color-darker;
-    }
-    */
 }
