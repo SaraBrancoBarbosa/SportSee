@@ -8,10 +8,10 @@ function PageAverageSessions( ) {
   const navigate = useNavigate()
   const { id:userId } = useParams()
   
-  // On utilise useAPI pour récupérer le mode actif
+  // useApi is used to get the active mode
   const { api } = useApi()
 
-  // On utilise l'API mocked ou back
+  // The mock or back API is used
   const { data:averageSessions, loading, loaded, error } = api.useGetAverageSessions(userId)
 
   // Error 500 management
@@ -25,9 +25,6 @@ function PageAverageSessions( ) {
     navigate("/error/",{state:{code:404, message:"Sessions non trouvées !"}})
     return <></>
   }
-
-  // Vérification que "sessions" est bien une propriété de "averageSessions"
-  const sessionsData = averageSessions?.sessions || []
   
   // Loading message
   if (loading || !loaded) {
@@ -40,7 +37,7 @@ function PageAverageSessions( ) {
   }
 
   return (
-    <AverageSessions sessions={sessionsData} />
+    <AverageSessions sessions={averageSessions.sessions} />
   )
 }
 

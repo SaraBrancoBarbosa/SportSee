@@ -1,9 +1,9 @@
 import ApiTemplate from "./ApiTemplate"
 import useFetch from "../../hooks/useFetch"
 
-// Api du Back. On utilise le fichier route.js pour se repérer
+// Back API. The route.js file is used to find the paths
 
-// Pour le futur déploiement de l'application. L'adresse du localhost:3000 se trouve dans le fichier .env
+// For the future deployment of the application. The address of localhost:3000 is in the .env file
 const API_CONFIG = {
     host: import.meta.env.VITE_HOST,
     userPath: (userId) => `${API_CONFIG.host}/user/${userId}`

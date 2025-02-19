@@ -8,10 +8,10 @@ function PageScore( ) {
   const navigate = useNavigate()
   const { id:userId } = useParams()
   
-  // On utilise useAPI pour récupérer le mode actif
+  // useApi is used to get the active mode
   const { api } = useApi()
 
-  // On utilise l'API mocked ou back
+  // The mock or back API is used
   const { data:score, loading, loaded, error } = api.useGetScore(userId)
 
   // Error 500 management
