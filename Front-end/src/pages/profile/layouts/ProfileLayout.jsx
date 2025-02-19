@@ -7,6 +7,6 @@ const ProfileLayout = () => {
             <Outlet />
         </div>
     )
-  }
+}
   
   export default ProfileLayout
