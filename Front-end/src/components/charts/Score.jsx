@@ -2,12 +2,13 @@ import RadialBarChartScore from "../radialBarChart/RadialBarChart"
 import PropTypes from "prop-types"
 
 const Score = ({score}) => {
+
   return (
     <div className="chart">
       <RadialBarChartScore score={score} />
     </div>
-    
   )
+  
 }
 
 Score.propTypes = {

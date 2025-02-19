@@ -2,9 +2,13 @@ import LineChartAverageSessions from "../lineChart/LineChart"
 import PropTypes from "prop-types"
 
 const AverageSessions = ({sessions}) => {
+
   return (
-    <LineChartAverageSessions sessions={sessions} />
+    <div className="chart">
+      <LineChartAverageSessions sessions={sessions} />
+    </div>
   )
+  
 }
 
 AverageSessions.propTypes = {

@@ -2,7 +2,8 @@
 
 .line-chart-container {
     background-color: $primary-color;
-    padding: 0 15px;
+    padding: 0 15px 5px 15px;
+    border-radius: 5px;
     
     .customTooltip {
         display: flex;
@@ -19,7 +20,7 @@
       
         .label {
           font-size: 0.5rem;
-          font-weight: medium;
+          font-weight: 500;
         }
     }
     
@@ -46,9 +47,11 @@
     // Dots
     .recharts-line-dot {
         display: none;
-    
-        &:hover, &:active {
-            display: block;
+    }
+
+    .text {
+        @include medium-screen {
+            font-size: 0.800rem;
         }
     }
 }

@@ -3,8 +3,7 @@ import "./header.css"
 
 const logo = "/assets/logo/logo.svg"
 
-function Header() {
-    
+function Header() { 
     return (
         <header className="header">
             <Link to="/">

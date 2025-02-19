@@ -11,20 +11,12 @@ function getScoreData(score) {
   return [
     {
       name: "Score",
-      // On multiplie la valeur par 100 (puisqu'on a du 0.% dans les data)
-      value: score * 100,  
+      value: score,  
     }
   ]
 }
 
 function RadialBarChartScore({ score }) {
-
-  const style = {
-    top: 24,
-    left: 10,
-    //transform: 'translate(0, -50%)',
-    lineHeight: "24px",
-  }
 
   return (
       <ResponsiveContainer className="radial-bar-chart-container">
@@ -35,13 +27,15 @@ function RadialBarChartScore({ score }) {
           outerRadius="70%" 
           barSize={10} 
           data={getScoreData(score)}
-          // Point de départ de l'angle
+          // Angle starting point
           startAngle={90}
-          // Puis calcul dynamique de l'angle de fin
+          // Then dynamic calculation of the end angle
           endAngle={90 + (score * 360)}
         >
+
+        <circle cx="50%" cy="50%" r="31%" fill="#FFFFFF" />
+        
           <RadialBar
-              minAngle={15}
               clockWise
               dataKey="value"
               fill="#FF0000"
@@ -54,10 +48,12 @@ function RadialBarChartScore({ score }) {
               textAnchor="middle"
               dominantBaseline="middle"
             >
+              {/* Value multiplied by 100 (since we have 0.% in the data) */}
               {`${(score * 100).toFixed(0)}%`}
             </text>
 
-            <text className="text-goal"
+            <text 
+              className="text-goal"
               x="50%"
               y="60%"
               textAnchor="middle"
@@ -66,7 +62,12 @@ function RadialBarChartScore({ score }) {
               de votre objectif
             </text>
 
-            <Legend iconSize={10} layout="vertical" verticalAlign="middle" wrapperStyle={style} />
+            <Legend 
+              iconSize={10} 
+              layout="vertical" 
+              verticalAlign="middle" 
+              wrapperStyle={{ top: 24, left: 10, lineHeight: "24px" }}
+            />
         
         </RadialBarChart>
       </ResponsiveContainer>

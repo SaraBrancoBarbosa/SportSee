@@ -10,7 +10,7 @@
         left: 30;
         transform: translate(0, -50%);
         font-size: 0.938rem;
-        font-weight: medium;
+        font-weight: 500;
         fill: #20253A;
 
         .recharts-surface {
@@ -30,11 +30,19 @@
         font-size: 1.625rem;
         font-weight: bold;
         fill: $secondary-color;
+
+        @include medium-screen {
+            font-size: 1.5rem;
+        }
     }
 
     .text-goal {
         font-size: 1rem;
-        font-weight: medium;
+        font-weight: 500;
         fill: $quaternary-color;
+
+        @include medium-screen {
+            font-size: 0.900rem;
+        }
     }
 }

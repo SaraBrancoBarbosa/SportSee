@@ -24,6 +24,7 @@ a:hover {
 }
 
 /***** Variables *****/
+/***** Breakpoints for responsive design *****/
 /***** Loading animation *****/
 .loading {
   display: -webkit-box;
@@ -83,7 +84,7 @@ a:hover {
   -webkit-transform: translate(0, -50%);
           transform: translate(0, -50%);
   font-size: 0.938rem;
-  font-weight: medium;
+  font-weight: 500;
   fill: #20253A;
 }
 .radial-bar-chart-container .recharts-legend-wrapper .recharts-surface {
@@ -100,8 +101,18 @@ a:hover {
   font-weight: bold;
   fill: #282D30;
 }
+@media screen and (max-width: 1280px) {
+  .radial-bar-chart-container .text-score {
+    font-size: 1.5rem;
+  }
+}
 .radial-bar-chart-container .text-goal {
   font-size: 1rem;
-  font-weight: medium;
+  font-weight: 500;
   fill: #74798C;
+}
+@media screen and (max-width: 1280px) {
+  .radial-bar-chart-container .text-goal {
+    font-size: 0.9rem;
+  }
 }/*# sourceMappingURL=radialBarChart.css.map */

@@ -53,11 +53,6 @@ function BarChartActivities({ sessions }) {
         )
     }
 
-    // To display the chart only when the data exist
-    if (!sessions.length) {
-        return <></>
-    }
-
     return (
     <ResponsiveContainer className="bar-chart-container">
         <BarChart data={getActivitiesData(sessions)} barGap={8} >

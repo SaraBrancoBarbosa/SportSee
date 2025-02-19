@@ -24,6 +24,7 @@ a:hover {
 }
 
 /***** Variables *****/
+/***** Breakpoints for responsive design *****/
 /***** Loading animation *****/
 .loading {
   display: -webkit-box;
@@ -74,7 +75,8 @@ a:hover {
 }
 .line-chart-container {
   background-color: #FF0101;
-  padding: 0 15px;
+  padding: 0 15px 5px 15px;
+  border-radius: 5px;
 }
 .line-chart-container .customTooltip {
   display: -webkit-box;
@@ -98,7 +100,7 @@ a:hover {
 }
 .line-chart-container .customTooltip .label {
   font-size: 0.5rem;
-  font-weight: medium;
+  font-weight: 500;
 }
 .line-chart-container .recharts-cartesian-axis-tick-value {
   fill: rgba(255, 255, 255, 0.5);
@@ -115,6 +117,8 @@ a:hover {
 .line-chart-container .recharts-line-dot {
   display: none;
 }
-.line-chart-container .recharts-line-dot:hover, .line-chart-container .recharts-line-dot:active {
-  display: block;
+@media screen and (max-width: 1280px) {
+  .line-chart-container .text {
+    font-size: 0.8rem;
+  }
 }/*# sourceMappingURL=lineChart.css.map */

@@ -1,12 +1,14 @@
-import BarChartActivities from '../barChart/BarChart'
+import BarChartActivities from "../barChart/BarChart"
 import PropTypes from "prop-types"
 
 const Activities = ({sessions}) => {
+
   return (
     <div className="daily">
         <BarChartActivities sessions={sessions} />
     </div>
   )
+  
 }
 
 Activities.propTypes = {

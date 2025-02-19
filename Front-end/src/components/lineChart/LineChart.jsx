@@ -5,14 +5,15 @@ import {
   XAxis,
   Tooltip,
   ResponsiveContainer,
+  YAxis,
 } from "recharts"
 import "./lineChart.css"
 
-// On nomme les jours à afficher sur le graphique
+// Naming the days on the chart
 function getAverageSessionsData(sessions) {
   const daysArray = ["L", "M", "M", "J", "V", "S", "D"]
 
-  // On récupère les données de "day" et "sessionLength"
+  // To get "day" and "sessionLength" data
   return sessions.map((session) => ({
     day: daysArray[session.day - 1],
     sessionLength: session.sessionLength,
@@ -21,7 +22,7 @@ function getAverageSessionsData(sessions) {
 
 function LineChartAverageSessions({ sessions }) {
   
-  // Customisation du tooltip
+  // Tooltip customisation
   const CustomTooltip = ({ active, payload }) => {
     if (active && payload && payload.length) {
       return (
@@ -35,23 +36,6 @@ function LineChartAverageSessions({ sessions }) {
     return null
   }
 
-  /*
-  const [lineChartData, setLineChartData] = useState([])
-
-  // Hook pour gérer les données quand averageSessions change
-  useEffect(() => {
-    if (averageSessions && averageSessions.sessions) {
-      const data = getAverageSessionsData(averageSessions)
-      setLineChartData(data)
-    }
-  }, [averageSessions])
-*/
-
-  // On affiche le graphique uniquement si lineChartData est disponible
-  if (!sessions.length) {
-    return <></>
-  }
-  
   return (
     <ResponsiveContainer className="line-chart-container">
       <LineChart data={getAverageSessionsData(sessions)} accessibilityLayer>
@@ -68,12 +52,15 @@ function LineChartAverageSessions({ sessions }) {
           fontSize="0.938rem"
           fontWeight="medium"
           x="25px"
-          y="30px"
+          y="40px"
+          className="text"
         >
-          Durée moyenne des sessions
+          Durée moyenne <tspan x="25px" dy="1.2em">des sessions</tspan>
         </text>
         
         <XAxis dataKey="day" />
+
+        <YAxis hide={true} domain={["dataMin - 5", "dataMax + 20"]} />
 
         <Tooltip
           content={<CustomTooltip />}
@@ -82,7 +69,13 @@ function LineChartAverageSessions({ sessions }) {
           className="line-stroke"
           type="monotone"
           dataKey="sessionLength"
-          activeDot={{ r: 8 }}
+          activeDot={{ 
+            r: 4,
+            strokeOpacity: 0.3,
+            strokeWidth: 10,
+            fill: "#FFFFFF",
+            fillOpacity: 1,
+          }}
           stroke="url(#opacityGradient)"
           strokeWidth={2}
         ></Line>
