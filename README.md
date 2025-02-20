@@ -22,7 +22,7 @@ Nous travaillons actuellement sur les utilisateurs d'id 12 et 18.
 `Node ou Yarn`
 
 ### Les étapes d'installation
-Clônez tout d'abord le repo :
+Clônez tout d'abord le repo :<br>
 `git clone https://github.com/SaraBrancoBarbosa/SportSee.git`
 
 **Installez les dépendances du _back-end_ :**
@@ -39,8 +39,8 @@ ou
 yarn dev
 ```
 
-**Installez les dépendances du _front-end_ :**
+**Installez les dépendances du _front-end_ :** <br>
 `npm install`
 
-Lancer le front-end_ sur le port 5173 :
+Lancer le front-end_ sur le port 5173 : <br>
 `npm run dev`
