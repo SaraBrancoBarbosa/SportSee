@@ -1,6 +1,7 @@
 @import "../../index";
 
 .bar-chart-container {
+    min-height: 100%;
     
     .customTooltip {
         display: flex;
@@ -19,7 +20,7 @@
         }
       
         .label {
-          font-size: 0.438rem;
+          font-size: 12px;
           font-weight: 500;
         }
     }
@@ -42,7 +43,7 @@
             }
 
             .text {
-                font-size: 0.875rem;
+                font-size: 14px;
                 font-weight: 500;
                 color: $quaternary-color;
             }
@@ -51,7 +52,7 @@
 
     // The title on the left
     .title-text {
-        font-size: 0.938rem;
+        font-size: 15px;
         font-weight: 500;
         fill: #20253A;
     }
@@ -67,7 +68,7 @@
         }
 
         .recharts-cartesian-axis-tick-value {
-            font-size: 0.875rem;
+            font-size: 14px;
             fill: #9B9EAC;
         }
     }
@@ -81,7 +82,7 @@
             display: none;
         }
         .recharts-cartesian-axis-tick-value {
-            font-size: 0.875rem;
+            font-size: 14px;
             fill: #9B9EAC;
         }
     }

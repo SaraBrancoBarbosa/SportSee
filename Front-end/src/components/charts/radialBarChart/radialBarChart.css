@@ -24,6 +24,7 @@ a:hover {
 }
 
 /***** Variables *****/
+/***** Breakpoints for responsive design *****/
 /***** Loading animation *****/
 .loading {
   display: -webkit-box;
@@ -72,30 +73,47 @@ a:hover {
             transform: rotate(360deg);
   }
 }
-.radar-chart-container {
+.radial-bar-chart-container {
+  background-color: #FBFBFB;
   width: 100%;
   height: 100%;
-  background-color: #282D30;
+  border-radius: 5px;
 }
-.radar-chart-container .recharts-text {
-  fill: white;
-  font-size: 0.75rem;
+.radial-bar-chart-container .recharts-legend-wrapper {
+  top: 24;
+  left: 30;
+  -webkit-transform: translate(0, -50%);
+          transform: translate(0, -50%);
+  font-size: 15px;
+  font-weight: 500;
+  fill: #20253A;
 }
-.radar-chart-container .recharts-polar-grid-concentric-polygon {
-  stroke: white;
-}
-.radar-chart-container .recharts-default-legend {
+.radial-bar-chart-container .recharts-legend-wrapper .recharts-surface {
   display: none;
 }
-.radar-chart-container .recharts-polar-radius-axis-tick-value {
+.radial-bar-chart-container .recharts-legend-wrapper .recharts-legend-item-text {
+  fill: #20253A;
+}
+.radial-bar-chart-container .recharts-legend-wrapper .recharts-legend-icon {
   display: none;
 }
-.radar-chart-container .recharts-polar-grid-angle {
-  display: none;
+.radial-bar-chart-container .text-score {
+  font-size: 26px;
+  font-weight: bold;
+  fill: #282D30;
 }
-.radar-chart-container .recharts-layer .recharts-polar-radius-axis .radiusAxis {
-  display: none;
+@media screen and (max-width: 1280px) {
+  .radial-bar-chart-container .text-score {
+    font-size: 24px;
+  }
 }
-.radar-chart-container .radiusAxis {
-  display: none;
-}/*# sourceMappingURL=radarChart.css.map */
+.radial-bar-chart-container .text-goal {
+  font-size: 16px;
+  font-weight: 500;
+  fill: #74798C;
+}
+@media screen and (max-width: 1280px) {
+  .radial-bar-chart-container .text-goal {
+    font-size: 14px;
+  }
+}/*# sourceMappingURL=radialBarChart.css.map */

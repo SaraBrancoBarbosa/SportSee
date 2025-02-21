@@ -1,4 +1,4 @@
-import BarChartActivities from "../barChart/BarChart"
+import BarChartActivities from "../charts/barChart/BarChart"
 import PropTypes from "prop-types"
 
 const Activities = ({sessions}) => {

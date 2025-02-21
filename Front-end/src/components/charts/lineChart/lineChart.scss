@@ -2,7 +2,7 @@
 
 .line-chart-container {
     background-color: $primary-color;
-    padding: 0 15px 5px 15px;
+    //padding: 0 15px 5px 15px;
     border-radius: 5px;
     
     .customTooltip {
@@ -11,15 +11,15 @@
         justify-content: center;
         background: white;
         color: #000000;
-        padding: 1px 7px;
-        height: 25px;
+        padding: 0 7px;
+        min-height: 25px;
       
         .tooltipDetails {
           display: flex;
         }
       
         .label {
-          font-size: 0.5rem;
+          font-size: 12px;
           font-weight: 500;
         }
     }
@@ -51,7 +51,7 @@
 
     .text {
         @include medium-screen {
-            font-size: 0.800rem;
+            font-size: 13px;
         }
     }
 }

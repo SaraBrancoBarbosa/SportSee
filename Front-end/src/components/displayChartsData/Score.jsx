@@ -1,4 +1,4 @@
-import RadialBarChartScore from "../radialBarChart/RadialBarChart"
+import RadialBarChartScore from "../charts/radialBarChart/RadialBarChart"
 import PropTypes from "prop-types"
 
 const Score = ({score}) => {

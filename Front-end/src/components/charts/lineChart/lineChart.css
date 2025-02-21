@@ -73,46 +73,51 @@ a:hover {
             transform: rotate(360deg);
   }
 }
-.radial-bar-chart-container {
-  background-color: #FBFBFB;
-  width: 100%;
-  height: 100%;
+.line-chart-container {
+  background-color: #FF0101;
+  border-radius: 5px;
 }
-.radial-bar-chart-container .recharts-legend-wrapper {
-  top: 24;
-  left: 30;
-  -webkit-transform: translate(0, -50%);
-          transform: translate(0, -50%);
-  font-size: 0.938rem;
+.line-chart-container .customTooltip {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  background: white;
+  color: #000000;
+  padding: 0 7px;
+  min-height: 25px;
+}
+.line-chart-container .customTooltip .tooltipDetails {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+.line-chart-container .customTooltip .label {
+  font-size: 12px;
   font-weight: 500;
-  fill: #20253A;
 }
-.radial-bar-chart-container .recharts-legend-wrapper .recharts-surface {
+.line-chart-container .recharts-cartesian-axis-tick-value {
+  fill: rgba(255, 255, 255, 0.5);
+}
+.line-chart-container .recharts-cartesian-axis-line {
   display: none;
 }
-.radial-bar-chart-container .recharts-legend-wrapper .recharts-legend-item-text {
-  fill: #20253A;
-}
-.radial-bar-chart-container .recharts-legend-wrapper .recharts-legend-icon {
+.line-chart-container .recharts-cartesian-axis-tick-line {
   display: none;
 }
-.radial-bar-chart-container .text-score {
-  font-size: 1.625rem;
-  font-weight: bold;
-  fill: #282D30;
+.line-chart-container .recharts-yAxis .recharts-cartesian-axis-tick-value {
+  display: none;
+}
+.line-chart-container .recharts-line-dot {
+  display: none;
 }
 @media screen and (max-width: 1280px) {
-  .radial-bar-chart-container .text-score {
-    font-size: 1.5rem;
+  .line-chart-container .text {
+    font-size: 13px;
   }
-}
-.radial-bar-chart-container .text-goal {
-  font-size: 1rem;
-  font-weight: 500;
-  fill: #74798C;
-}
-@media screen and (max-width: 1280px) {
-  .radial-bar-chart-container .text-goal {
-    font-size: 0.9rem;
-  }
-}/*# sourceMappingURL=radialBarChart.css.map */
+}/*# sourceMappingURL=lineChart.css.map */

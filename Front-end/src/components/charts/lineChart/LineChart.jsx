@@ -36,9 +36,21 @@ function LineChartAverageSessions({ sessions }) {
     return null
   }
 
+  const CustomHover = ({ points }) => {
+    return (
+      <rect 
+        x={points[0].x}
+        y="0"
+        height="100%"
+        width="100%"
+        fill="#00000010"
+      />
+    )
+  }
+
   return (
-    <ResponsiveContainer className="line-chart-container">
-      <LineChart data={getAverageSessionsData(sessions)} accessibilityLayer>
+    <ResponsiveContainer className="line-chart-container" >
+      <LineChart data={getAverageSessionsData(sessions)} accessibilityLayer width="100%" height="100%" margin={{left: 20, right: 20}}>
         <defs>
           <linearGradient id="opacityGradient">
             <stop offset="0%" stopColor="#FFFFFF" stopOpacity={0.5} />
@@ -64,7 +76,9 @@ function LineChartAverageSessions({ sessions }) {
 
         <Tooltip
           content={<CustomTooltip />}
+          cursor={<CustomHover />}
         />
+
         <Line
           className="line-stroke"
           type="monotone"
@@ -95,6 +109,7 @@ LineChartAverageSessions.propTypes = {
 
   active: PropTypes.node,
   payload: PropTypes.node,
+  points: PropTypes.array
 
 }
 

@@ -1,4 +1,4 @@
-import LineChartAverageSessions from "../lineChart/LineChart"
+import LineChartAverageSessions from "../charts/lineChart/LineChart"
 import PropTypes from "prop-types"
 
 const AverageSessions = ({sessions}) => {

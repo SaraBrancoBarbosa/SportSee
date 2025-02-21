@@ -28,9 +28,9 @@ function RadialBarChartScore({ score }) {
           barSize={10} 
           data={getScoreData(score)}
           // Angle starting point
-          startAngle={90}
+          startAngle={80}
           // Then dynamic calculation of the end angle
-          endAngle={90 + (score * 360)}
+          endAngle={80 + (score * 360)}
         >
 
         <circle cx="50%" cy="50%" r="31%" fill="#FFFFFF" />

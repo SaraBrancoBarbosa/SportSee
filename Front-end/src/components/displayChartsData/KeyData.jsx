@@ -1,4 +1,4 @@
-import CardKeyData from "../card/Card"
+import CardKeyData from "../charts/card/Card"
 import PropTypes from "prop-types"
 
 const KeyData = ({keyData}) => {

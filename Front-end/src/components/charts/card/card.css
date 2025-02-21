@@ -24,6 +24,7 @@ a:hover {
 }
 
 /***** Variables *****/
+/***** Breakpoints for responsive design *****/
 /***** Loading animation *****/
 .loading {
   display: -webkit-box;
@@ -72,7 +73,18 @@ a:hover {
             transform: rotate(360deg);
   }
 }
-.bar-chart-container .customTooltip {
+.card {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  background-color: #FBFBFB;
+  border-radius: 5px;
+  height: 124px;
+  width: 100%;
+  gap: 24px;
+  padding: 32px;
+}
+.card .icon-container {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -82,12 +94,15 @@ a:hover {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  background: #E60000;
-  color: white;
-  padding: 1px 7px;
-  height: 63px;
+  border-radius: 5px;
+  width: 60px;
+  height: 60px;
 }
-.bar-chart-container .customTooltip .tooltipDetails {
+.card .icon-container .icon {
+  height: 20px;
+  width: auto;
+}
+.card .text-container {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -95,69 +110,20 @@ a:hover {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  gap: 15px;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: start;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
-.bar-chart-container .customTooltip .label {
-  font-size: 0.438rem;
-  font-weight: 500;
+.card .text-container .text-value {
+  color: #282D30;
+  font-size: 1.25rem;
+  font-weight: bold;
 }
-.bar-chart-container .customLegend {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: end;
-      -ms-flex-pack: end;
-          justify-content: end;
-  gap: 30px;
-  padding-bottom: 40px;
-}
-.bar-chart-container .customLegend .icon-and-text {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  gap: 10px;
-}
-.bar-chart-container .customLegend .icon-and-text .icon {
-  width: 8px;
-  height: 8px;
-  border-radius: 50px;
-}
-.bar-chart-container .customLegend .icon-and-text .text {
-  font-size: 0.875rem;
-  font-weight: 500;
+.card .text-container .text-label {
   color: #74798C;
-}
-.bar-chart-container .title-text {
-  font-size: 0.938rem;
+  font-size: 0.875rem;
   font-weight: 500;
-  fill: #20253A;
-}
-.bar-chart-container .yAxis .recharts-cartesian-axis-line {
-  display: none;
-}
-.bar-chart-container .yAxis .recharts-cartesian-axis-tick-line {
-  display: none;
-}
-.bar-chart-container .yAxis .recharts-cartesian-axis-tick-value {
-  font-size: 0.875rem;
-  fill: #9B9EAC;
-}
-.bar-chart-container .xAxis .recharts-cartesian-axis-line {
-  stroke: #DEDEDE;
-}
-.bar-chart-container .xAxis .recharts-cartesian-axis-tick-line {
-  display: none;
-}
-.bar-chart-container .xAxis .recharts-cartesian-axis-tick-value {
-  font-size: 0.875rem;
-  fill: #9B9EAC;
-}
-.bar-chart-container .recharts-cartesian-grid-vertical {
-  display: none;
-}/*# sourceMappingURL=barChart.css.map */
+}/*# sourceMappingURL=card.css.map */

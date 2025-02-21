@@ -24,6 +24,7 @@ a:hover {
 }
 
 /***** Variables *****/
+/***** Breakpoints for responsive design *****/
 /***** Loading animation *****/
 .loading {
   display: -webkit-box;
@@ -72,57 +73,19 @@ a:hover {
             transform: rotate(360deg);
   }
 }
-.card {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  background-color: #FBFBFB;
-  border-radius: 5px;
-  height: 124px;
+.radar-chart-container {
   width: 100%;
-  gap: 24px;
-  padding: 32px;
-}
-.card .icon-container {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  min-height: 100%;
+  background-color: #282D30;
   border-radius: 5px;
-  width: 60px;
-  height: 60px;
 }
-.card .icon-container .icon {
-  height: 20px;
-  width: auto;
+.radar-chart-container .recharts-text {
+  fill: white;
+  font-size: 12px;
 }
-.card .text-container {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-align: start;
-      -ms-flex-align: start;
-          align-items: start;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+.radar-chart-container .recharts-polar-grid-concentric-polygon {
+  stroke: white;
 }
-.card .text-container .text-value {
-  color: #282D30;
-  font-size: 1.25rem;
-  font-weight: bold;
-}
-.card .text-container .text-label {
-  color: #74798C;
-  font-size: 0.875rem;
-  font-weight: 500;
-}/*# sourceMappingURL=card.css.map */
+.radar-chart-container .recharts-polar-grid-angle {
+  display: none;
+}/*# sourceMappingURL=radarChart.css.map */

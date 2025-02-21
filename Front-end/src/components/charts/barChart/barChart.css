@@ -73,12 +73,10 @@ a:hover {
             transform: rotate(360deg);
   }
 }
-.line-chart-container {
-  background-color: #FF0101;
-  padding: 0 15px 5px 15px;
-  border-radius: 5px;
+.bar-chart-container {
+  min-height: 100%;
 }
-.line-chart-container .customTooltip {
+.bar-chart-container .customTooltip {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -88,37 +86,82 @@ a:hover {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  background: white;
-  color: #000000;
+  background: #E60000;
+  color: white;
   padding: 1px 7px;
-  height: 25px;
+  height: 63px;
 }
-.line-chart-container .customTooltip .tooltipDetails {
+.bar-chart-container .customTooltip .tooltipDetails {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 15px;
 }
-.line-chart-container .customTooltip .label {
-  font-size: 0.5rem;
+.bar-chart-container .customTooltip .label {
+  font-size: 12px;
   font-weight: 500;
 }
-.line-chart-container .recharts-cartesian-axis-tick-value {
-  fill: rgba(255, 255, 255, 0.5);
+.bar-chart-container .customLegend {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: end;
+  gap: 30px;
+  padding-bottom: 40px;
 }
-.line-chart-container .recharts-cartesian-axis-line {
+.bar-chart-container .customLegend .icon-and-text {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 10px;
+}
+.bar-chart-container .customLegend .icon-and-text .icon {
+  width: 8px;
+  height: 8px;
+  border-radius: 50px;
+}
+.bar-chart-container .customLegend .icon-and-text .text {
+  font-size: 14px;
+  font-weight: 500;
+  color: #74798C;
+}
+.bar-chart-container .title-text {
+  font-size: 15px;
+  font-weight: 500;
+  fill: #20253A;
+}
+.bar-chart-container .yAxis .recharts-cartesian-axis-line {
   display: none;
 }
-.line-chart-container .recharts-cartesian-axis-tick-line {
+.bar-chart-container .yAxis .recharts-cartesian-axis-tick-line {
   display: none;
 }
-.line-chart-container .recharts-yAxis .recharts-cartesian-axis-tick-value {
+.bar-chart-container .yAxis .recharts-cartesian-axis-tick-value {
+  font-size: 14px;
+  fill: #9B9EAC;
+}
+.bar-chart-container .xAxis .recharts-cartesian-axis-line {
+  stroke: #DEDEDE;
+}
+.bar-chart-container .xAxis .recharts-cartesian-axis-tick-line {
   display: none;
 }
-.line-chart-container .recharts-line-dot {
-  display: none;
+.bar-chart-container .xAxis .recharts-cartesian-axis-tick-value {
+  font-size: 14px;
+  fill: #9B9EAC;
 }
-@media screen and (max-width: 1280px) {
-  .line-chart-container .text {
-    font-size: 0.8rem;
-  }
-}/*# sourceMappingURL=lineChart.css.map */
+.bar-chart-container .recharts-cartesian-grid-vertical {
+  display: none;
+}/*# sourceMappingURL=barChart.css.map */
