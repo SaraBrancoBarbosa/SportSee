@@ -1,6 +1,6 @@
 import { useNavigate, useParams } from "react-router"
 import useApi from "../../../api/Api"
-import AverageSessions from "../../../components/charts/AverageSessions"
+import AverageSessions from "../../../components/displayChartsData/AverageSessions"
 import "../profile.css"
 
 function PageAverageSessions( ) {

@@ -1,6 +1,6 @@
 import { useNavigate, useParams } from "react-router"
 import useApi from "../../../api/Api"
-import Activities from "../../../components/charts/Activities"
+import Activities from "../../../components/displayChartsData/Activities"
 import "../profile.css"
 
 function PageActivities() {
