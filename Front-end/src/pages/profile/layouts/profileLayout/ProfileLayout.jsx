@@ -1,11 +1,11 @@
 import { Outlet } from "react-router-dom"
-import "../profile.css"
+import "./profileLayout.css"
 
 const ProfileLayout = () => {
     return (
-        <div className="container">
+        <>
             <Outlet />
-        </div>
+        </>
     )
 }
   
