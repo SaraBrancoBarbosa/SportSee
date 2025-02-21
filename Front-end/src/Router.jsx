@@ -1,7 +1,8 @@
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom"
 import Layout from "./layouts/Layout"
 import Profile from "./pages/profile/Profile"
-import ProfileLayout from "./pages/profile/layouts/ProfileLayout"
+import ComponentLayout from "./pages/profile/layouts/componentLayout/ComponentLayout"
+import ProfileLayout from "./pages/profile/layouts/profileLayout/ProfileLayout"
 import AverageSessions from "./pages/profile/components/AverageSessions"
 import Activities from "./pages/profile/components/Activities"
 import Performances from "./pages/profile/components/Performances"
@@ -20,7 +21,7 @@ const AppRouter = () => {
 
           <Route path="user/:id" element={<ProfileLayout />}>
             <Route index element={<Profile />} />
-            <Route path="*" element={<ProfileLayout />}>
+            <Route path="*" element={<ComponentLayout />}>
               <Route path="average-sessions" element={<AverageSessions />} />
               <Route path="activities" element={<Activities />} />
               <Route path="performances" element={<Performances />} />
