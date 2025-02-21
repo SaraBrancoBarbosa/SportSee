@@ -41,7 +41,8 @@ function Profile( ) {
   }
 
   return (
-    <>
+    <div className="container">
+      
       <div className="title-and-subtitle">
         <h1>Bonjour <span className="first-name">{userProfile.userInfos.firstName}</span></h1>
         <h2>Félicitations ! Vous avez explosé vos objectifs hier 👏</h2>
@@ -65,7 +66,7 @@ function Profile( ) {
 
       </div>
 
-    </>
+    </div>
   )
 }
 

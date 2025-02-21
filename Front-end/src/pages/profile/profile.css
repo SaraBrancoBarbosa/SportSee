@@ -82,10 +82,9 @@ a:hover {
       -ms-flex-direction: column;
           flex-direction: column;
   text-align: start;
-  padding: 68px 90px 68px 90px;
+  padding: 68px 90px;
   width: 100%;
-  height: 100%;
-  gap: 5vh;
+  gap: 75px;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
@@ -112,16 +111,6 @@ a:hover {
   font-size: 1.125rem;
   font-weight: normal;
 }
-.container .daily {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  width: 100%;
-  min-height: 320px;
-  background-color: #FBFBFB;
-  border-radius: 5px;
-  padding: 23px;
-}
 .container .general-information {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -137,7 +126,7 @@ a:hover {
             flex-direction: column-reverse;
   }
 }
-.container .daily-and-charts {
+.container .general-information .daily-and-charts {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -149,18 +138,28 @@ a:hover {
   height: 100%;
   gap: 30px;
 }
-.container .charts {
+.container .general-information .daily-and-charts .daily {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+  height: 320px;
+  background-color: #FBFBFB;
+  border-radius: 5px;
+  padding: 23px;
+}
+.container .general-information .daily-and-charts .charts {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   gap: 20px;
   width: 100%;
-  min-height: 263px;
+  height: 263px;
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
 }
-.container .charts .chart {
+.container .general-information .daily-and-charts .charts .chart {
   border-radius: 5px;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -169,7 +168,7 @@ a:hover {
   height: 100%;
   max-width: 258px;
 }
-.container .key-data {
+.container .general-information .key-data {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -183,7 +182,7 @@ a:hover {
   min-width: 258px;
 }
 @media screen and (max-width: 1280px) {
-  .container .key-data {
+  .container .general-information .key-data {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     gap: 30px;
@@ -193,15 +192,7 @@ a:hover {
   }
 }
 
-.chart {
-  border-radius: 5px;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  width: 44%;
-  height: 100%;
-}
+/*
+// CSS for each chart pages
 
-.key-data {
-  gap: 30px;
-}/*# sourceMappingURL=profile.css.map */
+    *//*# sourceMappingURL=profile.css.map */
