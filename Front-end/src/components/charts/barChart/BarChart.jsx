@@ -31,7 +31,7 @@ function BarChartActivities({ sessions }) {
                 <div className="customTooltip">
                     <div className="tooltipDetails">
                         <p className="label">{payload[0].payload.kilogram}g</p>
-                        <p className="label">{payload[0].payload.calories}Kcal</p>
+                        <p className="label">{payload[1].payload.calories}Kcal</p>
                     </div>
                 </div>
             )
