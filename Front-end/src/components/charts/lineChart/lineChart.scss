@@ -23,6 +23,12 @@
           font-weight: 500;
         }
     }
+
+    .text {
+        @include medium-screen {
+            font-size: 13px;
+        }
+    }
     
     // Chart x and y lines CSS
     .recharts-cartesian-axis-tick-value {
@@ -47,11 +53,5 @@
     // Dots
     .recharts-line-dot {
         display: none;
-    }
-
-    .text {
-        @include medium-screen {
-            font-size: 13px;
-        }
     }
 }

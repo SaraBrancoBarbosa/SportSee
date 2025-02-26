@@ -8,6 +8,8 @@ import {
 } from "recharts"
 import "./radarChart.css"
 
+/***** Chart for the performances ******/
+
 // Translating the "kind" labels on the chart
 const translatedLabels = {
     "cardio": "Cardio",
@@ -18,8 +20,11 @@ const translatedLabels = {
     "intensity": "Intensité"
 }
 
+// To display more correctly the labels on the chart
 const CustomAxisLabel = ({payload, x, y, cy, ...props}) => {
     
+    // cy: y center of the chart. 
+    // y - cy: the difference between the label y position and cy
     const py = cy + (y - cy) * 1.05 + 3
 
     return (
@@ -50,13 +55,22 @@ function getPerformancesData(performances) {
         value: performance.value,
     })).reverse()
 }
+
 function RadarChartPerformances({ performances }) {
-    
     return (
         <ResponsiveContainer className="radar-chart-container">
-            <RadarChart cx="50%" cy="50%" data={getPerformancesData(performances)} outerRadius="70%">
+            <RadarChart 
+                cx="50%" 
+                cy="50%" 
+                data={getPerformancesData(performances)} 
+                outerRadius="70%"
+            >
                 <PolarGrid />
-                <PolarAngleAxis dataKey="kind" tick={<CustomAxisLabel style={{fill: "white", fontSize: "12px"}} />} />
+                <PolarAngleAxis 
+                    dataKey="kind" 
+                    tick={<CustomAxisLabel 
+                    style={{fill: "white", fontSize: "12px"}} />} 
+                />
                 <Radar 
                     name="Performance" 
                     dataKey="value"

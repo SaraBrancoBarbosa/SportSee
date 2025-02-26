@@ -11,6 +11,8 @@ import {
 import PropTypes from "prop-types"
 import "./barChart.css"
 
+/***** Chart for the activities ******/
+
 function getActivitiesData(sessions) {
     return sessions.map((session, index) => ({
         // Instead of displaying the dates => numbers starting from 1
@@ -43,9 +45,7 @@ function BarChartActivities({ sessions }) {
             <div className="customLegend">
                 {payload.map((entry, index) => (
                     <div className="icon-and-text" key={`item-${index}`}>
-                        <div className="icon"
-                            style={{ backgroundColor: entry.color }}
-                        />
+                        <div className="icon" style={{ backgroundColor: entry.color }}/>
                         <span className="text">{entry.value === "kilogram" ? "Poids (kg)" : "Calories brûlées (kCal)"}</span>
                     </div>
                 ))}

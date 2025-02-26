@@ -1,7 +1,9 @@
 import { useNavigate, useParams } from "react-router"
 import useApi from "../../../api/Api"
-import Activities from "../../../components/displayChartsData/Activities"
+import Activities from "../../../components/displayChartsComponents/Activities"
 import "../profile.css"
+
+/*****  In this folder, the components take care of the data recovery logic and the state mamangement (loading, loaded, error) for each of them *****/
 
 function PageActivities() {
   

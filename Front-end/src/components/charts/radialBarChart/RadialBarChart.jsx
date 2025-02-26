@@ -7,6 +7,8 @@ import {
 import PropTypes from "prop-types"
 import "./radialBarChart.css"
 
+/***** Chart for the score ******/
+
 function getScoreData(score) {
   return [
     {
@@ -17,7 +19,6 @@ function getScoreData(score) {
 }
 
 function RadialBarChartScore({ score }) {
-
   return (
       <ResponsiveContainer className="radial-bar-chart-container">
         <RadialBarChart 
@@ -33,6 +34,7 @@ function RadialBarChartScore({ score }) {
           endAngle={80 + (score * 360)}
         >
 
+        {/* The white circle */}
         <circle cx="50%" cy="50%" r="31%" fill="#FFFFFF" />
         
           <RadialBar

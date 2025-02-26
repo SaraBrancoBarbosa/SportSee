@@ -7,6 +7,8 @@ import Performances from "./components/Performances"
 import Activities from "./components/Activities"
 import "./profile.css"
 
+/***** The main Profile page where all the components are used *****/
+
 function Profile( ) {
   
   const navigate = useNavigate()

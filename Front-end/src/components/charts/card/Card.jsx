@@ -1,7 +1,7 @@
 import PropTypes from "prop-types"
 import "./card.css"
 
-// Card component for the key data
+/***** Chart for the key data ******/
 
 const iconMap = {
     "Calories": "/assets/icons/calorie.svg",

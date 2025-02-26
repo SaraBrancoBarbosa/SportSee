@@ -9,6 +9,8 @@ import {
 } from "recharts"
 import "./lineChart.css"
 
+/***** Chart for the average sessions ******/
+
 // Naming the days on the chart
 function getAverageSessionsData(sessions) {
   const daysArray = ["L", "M", "M", "J", "V", "S", "D"]
@@ -36,6 +38,7 @@ function LineChartAverageSessions({ sessions }) {
     return null
   }
 
+  // For the background black opacity when hover
   const CustomHover = ({ points }) => {
     return (
       <rect 
@@ -50,7 +53,15 @@ function LineChartAverageSessions({ sessions }) {
 
   return (
     <ResponsiveContainer className="line-chart-container" >
-      <LineChart data={getAverageSessionsData(sessions)} accessibilityLayer width="100%" height="100%" margin={{left: 20, right: 20}}>
+      <LineChart 
+        data={getAverageSessionsData(sessions)} 
+        accessibilityLayer 
+        width="100%" 
+        height="100%" 
+        margin={{left: 20, right: 20}}
+      >
+
+        {/* For the white line gradient */}
         <defs>
           <linearGradient id="opacityGradient">
             <stop offset="0%" stopColor="#FFFFFF" stopOpacity={0.5} />
@@ -93,6 +104,7 @@ function LineChartAverageSessions({ sessions }) {
           stroke="url(#opacityGradient)"
           strokeWidth={2}
         ></Line>
+        
       </LineChart>
     </ResponsiveContainer>
   )

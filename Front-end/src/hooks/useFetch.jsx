@@ -1,5 +1,7 @@
 import { useEffect, useState } from "react"
 
+/***** Custom hook to manage the data loading system *****/
+
 const useFetch = (url, key, onLoaded=() => {}) => {
   
     const [data, setData] = useState(null)
@@ -7,6 +9,7 @@ const useFetch = (url, key, onLoaded=() => {}) => {
     const [loaded, setLoaded] = useState(false)
     const [error, setError] = useState(null)
   
+    // To reset the states (data, loading, loaded and error) with each URL or key change
     useEffect(() => {
         setError(null)
         setLoaded(false)
@@ -14,6 +17,7 @@ const useFetch = (url, key, onLoaded=() => {}) => {
     }, [url, key])
 
     useEffect(() => {
+        // Launches only if loading is false, and if loaded is false
         if(loading || loaded) return
 
         // Async func inside useEffect
@@ -24,7 +28,7 @@ const useFetch = (url, key, onLoaded=() => {}) => {
                         return response.json()
                     })
                     .then(data => {
-                        // Formatage
+                        // Formatting the retrieved data, stored in data
                         setData(onLoaded?onLoaded(data):data)
                         setLoaded(true)
                     })

@@ -1,6 +1,6 @@
 import { useNavigate, useParams } from "react-router"
 import useApi from "../../../api/Api"
-import KeyData from "../../../components/displayChartsData/KeyData"
+import KeyData from "../../../components/displayChartsComponents/KeyData"
 import "../profile.css"
 
 function PageKeyData( ) {

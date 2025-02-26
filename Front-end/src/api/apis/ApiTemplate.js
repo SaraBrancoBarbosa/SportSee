@@ -1,3 +1,8 @@
+/*****
+Object: Templates for ApiBack and ApiMocked.
+If ApiBack or ApiMocked wrongly use the methods, the errors secure the app
+*****/
+
 const ApiTemplate = {
     useGetUser:(id) => { console.log(id) ; throw new Error ("useGetUser must be implemented")},
 

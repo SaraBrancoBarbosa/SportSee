@@ -3,8 +3,13 @@ import { Link } from "react-router"
 import ApiContext from "../../api/context/ApiContext"
 import "./settings.css"
 
+/***** For now, the Settings page is used to switch the API and to get the 12 and 18 users page easily ******/
+
 function Settings() {
     
+    // Hook useContext: get the ApiContext values =>
+        // toggleMode to swap the API
+        // mode (apiMode): mode's current state
     const { toggleMode, mode:apiMode } = useContext(ApiContext)
 
     const buttonText = apiMode === "mocked" 
