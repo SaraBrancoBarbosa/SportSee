@@ -3,34 +3,34 @@ import useFetch from "../../hooks/useFetch"
 
 /***** Back API. The route.js file is used to find the paths *****/
 
-// For the future deployment of the application. The address of localhost:3000 is in the .env file
+// For the future deployment of the application. The localhost:3000 address is in the .env file
 const API_CONFIG = {
     host: import.meta.env.VITE_HOST,
     userPath: (userId) => `${API_CONFIG.host}/user/${userId}`
 } 
 
 // The useFetch hook is used
-const useFetchUserProfile = (userId) => useFetch(`${API_CONFIG.userPath(userId)}`, userId, (data) =>
+const useFetchUserProfile = (userId) => useFetch(`${API_CONFIG.userPath(userId)}`, `User-${userId}`, (data) =>
     data?data.data:undefined
 )
 
-const useFetchAverageSessions = (userId) => useFetch(`${API_CONFIG.userPath(userId)}/average-sessions`, userId, (data) =>
+const useFetchAverageSessions = (userId) => useFetch(`${API_CONFIG.userPath(userId)}/average-sessions`, `Sessions-${userId}`, (data) =>
     data?data.data:undefined
 )
 
-const useFetchPerformances = (userId) => useFetch(`${API_CONFIG.userPath(userId)}/performance`, userId, (data) =>
+const useFetchPerformances = (userId) => useFetch(`${API_CONFIG.userPath(userId)}/performance`, `Performances-${userId}`, (data) =>
     data?data.data:undefined
 )
 
-const useFetchKeyData = (userId) => useFetch(`${API_CONFIG.userPath(userId)}`, userId, (data) =>
+const useFetchKeyData = (userId) => useFetch(`${API_CONFIG.userPath(userId)}`, `KeyData-${userId}`, (data) =>
     data?data.data:undefined
 )
 
-const useFetchActivities = (userId) => useFetch(`${API_CONFIG.userPath(userId)}/activity`, userId, (data) =>
+const useFetchActivities = (userId) => useFetch(`${API_CONFIG.userPath(userId)}/activity`, `Activities-${userId}`, (data) =>
     data?data.data:undefined
 )
 
-const useFetchScore = (userId) => useFetch(`${API_CONFIG.userPath(userId)}`, userId, (data) => {
+const useFetchScore = (userId) => useFetch(`${API_CONFIG.userPath(userId)}`, `Score-${userId}`, (data) => {
     const scoreData = data?data.data:undefined
     return scoreData.score ?? scoreData.todayScore
 })
