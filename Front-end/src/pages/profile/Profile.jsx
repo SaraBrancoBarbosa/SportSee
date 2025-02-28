@@ -1,4 +1,5 @@
 import { useNavigate, useParams } from "react-router"
+import { useEffect } from "react"
 import useApi from "../../api/Api"
 import KeyData from "./components/KeyData"
 import AverageSessions from "./components/AverageSessions"
@@ -9,7 +10,7 @@ import "./profile.css"
 
 /***** The main Profile page where all the components are used *****/
 
-function Profile( ) {
+function Profile() {
   
   const navigate = useNavigate()
   const { id:userId } = useParams()
@@ -20,20 +21,23 @@ function Profile( ) {
   // The mock or back API is used
   const { data:userProfile, loading, loaded, error } = api.useGetUser(userId)
 
-  // Error 500 management
-  if (error) {
-    navigate("/error/",{state:{code:500, message:error}})
-    return <></>
-  }
-  
-  // Error 404 management
-  if (loaded && !userProfile) {
-    navigate("/error/",{state:{code:404, message:"Utilisateur non trouvé !"}})
-    return <></>
-  }
-  
+  // useEffect hook to use navigate
+  useEffect(() => {
+    // Error 500 management
+    if (error) {
+      navigate("/error/",{state:{code:500, message:error}})
+      return
+    }
+
+    // Error 404 management
+    if (loaded && !userProfile) {
+      navigate("/error/",{state:{code:404, message:"Utilisateur non trouvé !"}})
+      return
+    }
+  }, [error, loaded, userProfile, navigate])
+
   // Loading message
-  if (loading || !loaded) {
+  if (loading || !loaded || !userProfile) {
     return (
     <div className="loading">
         Chargement des informations
@@ -41,7 +45,7 @@ function Profile( ) {
     </div>
     )
   }
-
+  
   return (
     <div className="container">
       
