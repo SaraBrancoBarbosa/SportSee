@@ -5,9 +5,11 @@ import App from "./App.jsx"
 import ApiProvider from "./api/context/ApiProvider.jsx"
 
 createRoot(document.getElementById("root")).render(
-  <ApiProvider>
-    <StrictMode>
+  <>
+  <StrictMode>
+    <ApiProvider>
       <App />
-    </StrictMode>
-  </ApiProvider>
+    </ApiProvider>
+  </StrictMode>
+  </>
 )
