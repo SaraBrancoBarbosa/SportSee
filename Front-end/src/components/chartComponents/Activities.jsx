@@ -2,7 +2,7 @@ import BarChartActivities from "../charts/barChart/BarChart"
 import PropTypes from "prop-types"
 
 /***** 
- This folder is used to display the charts components. 
+ This folder contains components responsible for rendering and displaying chart data.
  The pages call these components.
  *****/
 

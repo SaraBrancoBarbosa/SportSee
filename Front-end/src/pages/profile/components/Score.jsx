@@ -1,6 +1,6 @@
 import { useNavigate, useParams } from "react-router"
 import useApi from "../../../api/Api"
-import Score from "../../../components/displayChartsComponents/Score"
+import Score from "../../../components/chartComponents/Score"
 import "../profile.css"
 
 function PageScore( ) {

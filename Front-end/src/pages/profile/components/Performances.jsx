@@ -1,6 +1,6 @@
 import { useNavigate, useParams } from "react-router"
 import useApi from "../../../api/Api"
-import Performances from "../../../components/displayChartsComponents/Performances"
+import Performances from "../../../components/chartComponents/Performances"
 import "../profile.css"
 
 function PagePerformances( ) {
