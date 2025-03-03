@@ -17,7 +17,7 @@ const ApiProvider = ({ children }) => {
         })
     }
 
-    // On définit donc le contexte qui contient deux valeurs : mode et toggleMode
+    // The context is defined with two values: mode and toggleMode
     return <ApiContext.Provider value={{ mode, toggleMode }}>
         {children}
     </ApiContext.Provider>
