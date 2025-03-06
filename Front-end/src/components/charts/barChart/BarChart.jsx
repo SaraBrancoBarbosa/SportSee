@@ -24,7 +24,7 @@ function getActivitiesData(sessions) {
 
 function BarChartActivities({ sessions }) {
   
-    // Toopltip customisation
+    // Tooltip customisation
     const CustomTooltip = ({ active, payload }) => {
         if (active && payload && payload.length) {
             return (
