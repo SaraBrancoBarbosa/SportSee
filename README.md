@@ -25,10 +25,10 @@ Nous travaillons actuellement sur les utilisateurs d'id 12 et 18.
 Clônez tout d'abord le repo :<br>
 `git clone https://github.com/SaraBrancoBarbosa/SportSee.git`
 
-**Installez les dépendances du _back-end_ :**
+**Installez les dépendances du _back-end_ :** <br>
 `npm install`
 
-Lancez le _back-end_ sur le port par défaut 3000, en vous positionnant dans le dossier Back-end :
+Lancez le _back-end_ sur le port par défaut 3000, en vous positionnant dans le dossier Back-end : <br>
 `npm start`
 
 **Installez les dépendances du _front-end_ :** <br>
