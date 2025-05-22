@@ -1,6 +1,6 @@
 ![Logo de l'application SportSee.](/Front-end/public/assets/logo/logo.svg)
 
-# L'application SportSee
+# L'application SportSee (entreprise fictive)
 SportSee est une application proposant un coaching sportif à ses utilisateurs.<br>
 Elle permet notamment à ces utilisateurs de suivre leur nombre de sessions réalisées ainsi que leur nombre de calories brûlées.<br><br>
 
