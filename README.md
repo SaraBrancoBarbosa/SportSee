@@ -36,3 +36,10 @@ Lancez le _back-end_ sur le port par défaut 3000, en vous positionnant dans le 
 
 Lancer le front-end_ sur le port 5173, en vous positionnant dans le dossier Front-end : <br>
 `npm run dev`
+
+## Visuels du projet
+### Page profile, desktop
+![Page profile, desktop.](/Front-end/public/assets/screenshots/profile-desktop.png)
+
+### Page profile, tablette
+![Page profile, tablette.](/Front-end/public/assets/screenshots/profile-tablet.png)
