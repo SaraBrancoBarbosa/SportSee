@@ -38,8 +38,8 @@ Lancer le front-end_ sur le port 5173, en vous positionnant dans le dossier Fron
 `npm run dev`
 
 ## Visuels du projet
-### Page profile, desktop
+### Page profil, desktop
 ![Page profile, desktop.](/Front-end/public/assets/screenshots/profile-desktop.png)
 
-### Page profile, tablette
+### Page profil, tablette
 ![Page profile, tablette.](/Front-end/public/assets/screenshots/profile-tablet.png)
